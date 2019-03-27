@@ -99,7 +99,7 @@ header .disapear {
 
 header .about h1 {
     font-size: var(--fontSizeH);
-    transform: translateY(-125%);
+    transform: translateY(-100%);
     transition: all 1s;
 }
 
