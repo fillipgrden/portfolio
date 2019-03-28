@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Arimo|Nunito:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -131,16 +130,12 @@
             </div>
         </div>
         <div class="form">
-            <form action="" method="post">
-                <label for="name">Imię</label>
-                <input type="text" id="surname">
-                <label for="surname">Nazwisko</label>
-                <input type="tel" id="phone">
-                <label for="mail">Email</label>
-                <input type="email">
-                <label for="tekst">Zostaw wiadomość</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <input type="submit">
+            <form action="contactform.php" method="post">
+                <input type="text" name="name" placeholder="Imię">
+                <input type="text" name="surname" placeholder="Nazwisko">
+                <input type="text" name="mail" placeholder="Your e-mail">
+                <textarea name="message" id="" placeholder="Message"></textarea>
+                <button type="submit" name="submit">WYŚLIJ</button>
             </form>
         </div>
     </section>
@@ -152,4 +147,4 @@
     <script src="main.js"></script>
 </body>
 
-</html>
+</html> 
