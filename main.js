@@ -1,37 +1,56 @@
+//HTML elements
 const mainUL = document.querySelectorAll('header .about h1 ul');
 const ulHeight = document.querySelector('header .about h1 ul').offsetHeight;
 const h1 = document.querySelector('header .about h1');
 const paragraph = document.querySelector('header p');
+const aboutDiv = document.querySelector('header .about');
 
-const spnText = document.querySelector('.text');
-const txt = 'Cześć nazywam się Filip Grdeń pochodzę z okrąglika a dokładniej z białej chatya, można mnie też poznać pod ksywką FILON, moje motto, które mam wytatułowane na przedramieniu brzmi "jeżeli zaczynasz impreze w piątek, kończ ją w niedziele"';
+const txt = 'Cześć, nazywam się Filip Grdeń jestem początkującym developerem oraz studentem informatyki i ekonometrii ze specjalnością "programowanie aplikacji mobilnych i webowych". Front-endem zainteresowałem się w marcu 2018 roku, a już miesiąć później uczestniczyłem w bootcampie Akademii108 w Krakowie. Programuję, ponieważ lubię tworzyć coś z niczego, dlatego też moim celem jest ciągły rozwój w technologiach webowych, aby granicą jakośći moich projektów były nie umiejętności lecz tylko wyobraźnia. Obecnie rozwijam się  w Reactie oraz w C#. ';
 
 
 // Parametry
 let indexText = 0;
 const time = 40;
+let indexTyping;
 
 // Implementacja
+const addLetter = () => {
+    if(paragraph.textContent.length == txt.length) return;
+    paragraph.textContent += txt[indexText];
+    indexText++;
+    if (indexText === txt.length) clearInterval(indexTyping);
+    if(aboutDiv.className.includes("disapear")) return;
+}
 
-const addLetter1 = () => {
-    const addLetter = () => {
-        paragraph.textContent += txt[indexText];
-        indexText++;
-        if (indexText === txt.length) clearInterval(indexTyping);
-    }
-
-    const indexTyping = setInterval(addLetter, time)
+const causeAddLetter = () => {
+    indexTyping = setInterval(addLetter, time);
 }
 
 
-// Implementacja
 const start = () => {
     h1.style.height = (ulHeight / 2) + 'px';
 }
 
-document.querySelector('a.about').addEventListener("click", addLetter1);
-
 start();
+
+$('a.about').on('click', function () {
+    if(paragraph.className.includes('disapear')) {
+        $('header p').removeClass('disapear');
+        paragraph.textContent = "";
+        indexText = 0;
+        clearInterval(indexTyping);
+    }
+    $('header .about').addClass('disapear');
+    causeAddLetter();
+})
+
+$('nav a.main').on('click', function () {
+    if(aboutDiv.className.includes('disapear')) {
+        $('header .about').removeClass('disapear');
+        $('header p').addClass('disapear');
+    }
+})
+
 
 $('a:not([data-type="about"])').on('click', function () {
     const goToSection = "#" + $(this).attr('class');
@@ -40,9 +59,6 @@ $('a:not([data-type="about"])').on('click', function () {
     }, 1500)
 })
 
-$('a.about').on('click', function () {
-    $('.about').addClass('disapear');
-})
 
 $(".bootstrap-project").hover(function () {
     $(this).parent(".container-projects").siblings('.container-skills').children('.html').addClass("no-filter");
