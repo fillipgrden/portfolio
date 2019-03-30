@@ -1,0 +1,95 @@
+@media all and (max-width: 800px) {
+    .side-menu {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        height: 100vh;
+        background-color: #161616;
+        color: #eeddff;
+        transition: top 0.4s;
+        top: -100vh;
+    }
+
+    nav.off {
+        top: 0;
+    }
+
+    nav ul {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        height: 100vh;
+        border: none;
+    }
+
+    header p {
+        top: 15%;
+    }
+
+    header .about h1 {
+        font-size: 36px;
+    }
+
+    #projects .container-skills {
+        display: none;
+    }
+
+    #projects .container-projects {
+        border: none;
+    }
+
+    #projects .container-projects div {
+        width: 50%;
+        height: calc(100vh / 3);
+    }
+
+
+    #contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact div {
+        width: 80%;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    footer p {
+        width: 50%;
+    }
+}
+
+@media all and (max-width: 640px) {
+    header .about h1 {
+        font-size: 24px;
+    }
+
+    i,
+    #contact .contact-container .icon-container i  {
+        font-size: 36px;
+    }
+}
+
+
+@media all and (max-width: 480px) {
+    header p {
+        font-size: 15px;
+    }
+
+    a span {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}

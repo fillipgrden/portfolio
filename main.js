@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     //HTML elements
     const mainUL = document.querySelectorAll('header .about h1 ul');
     const ulHeight = document.querySelector('header .about h1 ul').offsetHeight;
@@ -9,13 +8,17 @@ $(document).ready(function () {
 
     const txt = 'Cześć, nazywam się Filip Grdeń jestem początkującym developerem oraz studentem informatyki i ekonometrii ze specjalnością "programowanie aplikacji mobilnych i webowych". Front-endem zainteresowałem się w marcu 2018 roku, a już miesiąć później uczestniczyłem w bootcampie Akademii108 w Krakowie. Programuję, ponieważ lubię tworzyć coś z niczego, dlatego też moim celem jest ciągły rozwój w technologiach webowych, aby granicą jakośći moich projektów były nie umiejętności lecz tylko wyobraźnia. Obecnie rozwijam się  w Reactie oraz w C#. ';
 
+    //side menu 
+    $('.side-menu, nav ul li a').on("click", function() {
+        $('.fas, nav').toggleClass('off');
+    })
 
-    // Parametry
+
+    //about effect
     let indexText = 0;
     const time = 40;
     let indexTyping;
 
-    // Implementacja
     const addLetter = () => {
         if (paragraph.textContent.length == txt.length) return;
         paragraph.textContent += txt[indexText];
@@ -29,6 +32,7 @@ $(document).ready(function () {
     }
 
 
+    //h1 height
     const start = () => {
         h1.style.height = (ulHeight / 2) + 'px';
     }
@@ -61,7 +65,7 @@ $(document).ready(function () {
         }, 1500)
     })
 
-
+    //projects hover effect
     $(".bootstrap-project").hover(function () {
         $(this).parent(".container-projects").siblings('.container-skills').children('.html').addClass("no-filter");
         $(this).parent(".container-projects").siblings('.container-skills').children('.bootstrap').addClass("no-filter");

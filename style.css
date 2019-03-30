@@ -16,6 +16,28 @@ a {
     display: inline-block;
 }
 
+.side-menu {
+    position: fixed;
+    display: none;
+    right: 30px;
+    top: 30px;
+    z-index: 10;
+}
+
+.side-menu .fas {
+    color: #edf0f4;
+    font-size: 24px;
+}
+
+.side-menu:hover .fas {
+    cursor: pointer;
+    color: #37dfe5;
+}
+
+
+.side-menu .off {
+    display: none;
+}
 
 nav {
     position: fixed;
@@ -76,7 +98,7 @@ header {
 header p {
     position: absolute;
     top: 30%;
-    width: 50%;
+    width: 70%;
     font-weight: 700;
     transition: all 1s;
 }
@@ -243,7 +265,7 @@ header .about .fa-code {
 
 header a.projects {
     position: absolute;
-    bottom: 25%;
+    bottom: 10%;
 }
 
 header a.projects,
@@ -407,15 +429,11 @@ header a.projects:active span:after,
 
 
 #projects .container-projects .bootstrap-project {
-    background-image: url('img/bootstrap-project.png');
-}
-
-#projects .container-projects .bootstrap-project:hover~.html {
-    filter: grayscale(0);
+    background-image: url('img/bootstrap-project-min.png');
 }
 
 #projects .container-projects .sass-project {
-    background-image: url('img/sccs-project.png')
+    background-image: url('img/sccs-project-min.png')
 }
 
 #projects .container-projects .sql-project {
@@ -423,15 +441,15 @@ header a.projects:active span:after,
 }
 
 #projects .container-projects .artwood-project {
-    background-image: url('img/cyklinowanie-project.png')
+    background-image: url('img/cyklinowanie-project-min.png')
 }
 
 #projects .container-projects .portfolio-project {
-    background-image: url('img/portfolio-project.png')
+    background-image: url('img/portfolio-project-min.png')
 }
 
 #projects .container-projects .procural-project {
-    background-image: url('img/procural-project.png')
+    background-image: url('img/procural-project-min.png')
 }
 
 #projects .container-projects .mask {
@@ -523,8 +541,13 @@ header a.projects:active span:after,
     margin-top: 50px;
 }
 
+#contact .contact-container .icon-container a {
+    color: #edf0f4;
+}
+
 #contact .contact-container .icon-container i {
     font-size: 50px;
+    margin: 0px 10px;
     transition: all 0.4s;
 }
 
