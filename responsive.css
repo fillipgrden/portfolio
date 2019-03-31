@@ -34,6 +34,7 @@
 
     header .about h1 {
         font-size: 36px;
+        height: 45px;
     }
 
     #projects .container-skills {
@@ -71,11 +72,12 @@
 @media all and (max-width: 640px) {
     header .about h1 {
         font-size: 24px;
+        height: 32px;
     }
 
-    i,
-    #contact .contact-container .icon-container i  {
-        font-size: 36px;
+    #contact .contact-container .icon-container i,
+    header .about .fas  {
+        font-size: 24px;
     }
 }
 

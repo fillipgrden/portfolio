@@ -31,14 +31,6 @@ $(document).ready(function () {
         indexTyping = setInterval(addLetter, time);
     }
 
-
-    //h1 height
-    const start = () => {
-        h1.style.height = (ulHeight / 2) + 'px';
-    }
-
-    start();
-
     $('a.about').on('click', function () {
         if (paragraph.className.includes('disapear')) {
             $('header p').removeClass('disapear');
