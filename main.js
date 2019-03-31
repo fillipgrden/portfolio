@@ -6,7 +6,7 @@ $(document).ready(function () {
     const paragraph = document.querySelector('header p');
     const aboutDiv = document.querySelector('header .about');
 
-    const txt = 'Cześć, nazywam się Filip Grdeń jestem początkującym developerem oraz studentem informatyki i ekonometrii ze specjalnością "programowanie aplikacji mobilnych i webowych". Front-endem zainteresowałem się w marcu 2018 roku, a już miesiąć później uczestniczyłem w bootcampie Akademii108 w Krakowie. Programuję, ponieważ lubię tworzyć coś z niczego, dlatego też moim celem jest ciągły rozwój w technologiach webowych, aby granicą jakośći moich projektów były nie umiejętności lecz tylko wyobraźnia. Obecnie rozwijam się  w Reactie oraz w C#. ';
+    const txt = 'Cześć, nazywam się Filip Grdeń jestem developerem oraz studentem informatyki i ekonometrii ze specjalnością "programowanie aplikacji mobilnych i webowych". Front-endem zainteresowałem się w marcu 2018 roku, a już miesiąć później uczestniczyłem w bootcampie Akademii 108 w Krakowie. Programuję, ponieważ lubię tworzyć coś z niczego, dlatego też moim celem jest ciągły rozwój w technologiach webowych, aby granicą jakośći moich projektów były nie umiejętności lecz tylko wyobraźnia. Obecnie rozwijam się  w Reactie oraz w C#. ';
 
     //side menu 
     $('.side-menu, nav ul li a').on("click", function() {
