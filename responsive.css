@@ -78,7 +78,7 @@
 
     #contact .contact-container .icon-container i,
     header .about .fas  {
-        font-size: 24px;
+        font-size: 48px;
     }
     #contact .contact-container h2 {
         font-size: 18px;
@@ -98,13 +98,16 @@
     button {
         font-size: 12px;
     }
+    #contact .form form button {
+        width: 50%;
+    }
 }
 
 
 @media all and (max-width: 360px) {
     header .about h1 {
-        font-size: 12px;
-        height: 16px;
+        font-size: 15px;
+        height: 20px;
     }
 
 }

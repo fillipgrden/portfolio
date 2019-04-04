@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Filip Grdeń</title>
     <link href="https://fonts.googleapis.com/css?family=Arimo|Nunito:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -82,35 +82,35 @@
             </div>
         </div>
         <div class="container-projects">
-            <div class="bootstrap-project">
+            <div class="bootstrap-project project" data-skill="html js css bootstrap rwd jquery">
                 <div class="mask">
                     <a href="https://github.com/fillipgrden/bootstrap-project"> <i class="fab fa-github"></i></a>
                     <a href="https://fillipgrden.github.io/bootstrap-project/index"> <i class="fas fa-play"></i></a>
                 </div>
             </div>
-            <div class="sass-project">
+            <div class="sass-project project" data-skill="html sass js css bootstrap rwd jquery gulp">
                 <div class="mask">
                     <a href="https://github.com/fillipgrden/sass-project"> <i class="fab fa-github"></i></a>
                     <a href="https://fillipgrden.github.io/sass-project/"> <i class="fas fa-play"></i></a>
                 </div>
             </div>
-            <div class="sql-project">
+            <div class="sql-project project" data-skill="sql">
                 <div class="mask">
-                    <a href="../portfolio/files/Baza danych dla Biura.docx" download="../portfolio/files/Baza danych dla Biura.docx"><i class="fas fa-file-word"></i></a>
+                    <a href="https://github.com/fillipgrden/sqlproject"><i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="artwood-project">
+            <div class="artwood-project project" data-skill="html css js jquery seo rwd">
                 <div class="mask">
                     <a href="https://github.com/fillipgrden/artwood-project"> <i class="fab fa-github"></i></a>
                     <a href="http://www.artwood-cyklinowanie.pl"> <i class="fas fa-play"></i></a>
                 </div>
             </div>
-            <div class="portfolio-project">
+            <div class="portfolio-project project" data-skill="html js css rwd jquery">
                 <div class="mask">
                     <a href="https://github.com/fillipgrden/portfolio"> <i class="fab fa-github"></i></a>
                 </div>
             </div>
-            <div class="procural-project">
+            <div class="procural-project project" data-skill="html js css bootstrap rwd jquery">
                 <div class="mask">
                     <div>
                         <a href=""> <i class="fab fa-github"></i></a>
@@ -134,10 +134,11 @@
         </div>
         <div class="form">
             <form action="contactform.php" method="post">
+                <p></p>
                 <input type="text" name="name" placeholder="Imię">
                 <input type="text" name="surname" placeholder="Nazwisko">
-                <input type="text" name="mail" placeholder="Your e-mail">
-                <textarea name="message" id="" placeholder="Message"></textarea>
+                <input type="email" name="mail" placeholder="Twój e-mail*">
+                <textarea name="message" id="" placeholder="Wiadomość*"></textarea>
                 <button type="submit" name="submit">WYŚLIJ</button>
             </form>
         </div>

@@ -567,11 +567,13 @@ form textarea {
     margin-top: 20px;
     padding: 10px 10px;
     color: #161616;
+    font-family: 'Arimo', sans-serif;
+    border: 2px solid transparent;
 }
 
 #contact .form form input:focus,
 #contact .form form textarea:focus {
-    border: 2px solid #37dfe5;
+    border-color: #37dfe5;
 }
 
 #contact .form form button {
@@ -592,6 +594,10 @@ form textarea {
     cursor: pointer;
     background: #37dfe5;
     color: #161616;
+}
+
+#contact .form form p {
+    height: 60px;;
 }
 
 footer {
@@ -619,3 +625,4 @@ footer a .fas {
 footer a:hover .fas {
     transform: translateY(-50%);
 }
+
